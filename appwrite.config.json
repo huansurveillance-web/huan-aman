@@ -1,0 +1,36 @@
+{
+    "organizationId": "6a98819c002e286c035c",
+    "projectId": "6a9881e60035f46defb9",
+    "projectName": "HUAN Surveillance",
+    "endpoint": "https://sgp.cloud.appwrite.io/v1",
+    "functions": [
+        {
+            "$id": "generate-quote",
+            "name": "Huna ",
+            "runtime": "node-18.0",
+            "buildSpecification": "s-2vcpu-2gb",
+            "runtimeSpecification": "s-0.5vcpu-512mb",
+            "execute": [
+                "any"
+            ],
+            "events": [],
+            "scopes": [
+                "users.read"
+            ],
+            "schedule": "",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.js",
+            "commands": "npm install",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "deploymentRetention": 0,
+            "path": "functions/huna",
+            "previewDomainTarget": "region",
+            "previewDomainLabel": "huna-6a99"
+        }
+    ]
+}
