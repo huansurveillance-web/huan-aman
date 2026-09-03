@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Compatibility shim for iframe/sandbox environments with getter-only fetch property
+      (function () {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            get: function () {
+              return originalFetch;
+            },
+            set: function (newFetch) {
+              originalFetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (err) {
+          // If window.fetch is already non-configurable, silently ignore
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUAN Surveillance — Turnkey CCTV, Fiber Optic & Security Engineering Pakistan</title>
+    <meta name="description" content="Pakistan's premier surveillance systems engineering firm. Turnkey commercial CCTV installations, single-mode optical fiber backbones, command center video walls, and guaranteed 24–36 hour service resolution across Karachi." />
+    <meta name="keywords" content="CCTV installation Karachi, commercial security cameras Pakistan, optical fiber CCTV cabling, Hikvision Dahua Pakistan, control room video wall, security systems AMC Karachi, FBR registered CCTV vendor" />
+    
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#11466A" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HUAN Surveillance — Advanced CCTV & Security Systems Pakistan" />
+    <meta property="og:description" content="Turnkey 4K IP CCTV, long-range optical fiber, and 24/7 command centers. Guaranteed 24-36hr on-site service resolution across Karachi." />
+    <meta property="og:image" content="/favicon.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HUAN Surveillance — Advanced CCTV & Security Systems Pakistan" />
+    <meta name="twitter:description" content="Turnkey 4K IP CCTV, long-range optical fiber, and 24/7 command centers. Guaranteed 24-36hr on-site service resolution across Karachi." />
+    <meta name="twitter:image" content="/favicon.png" />
+
+    <!-- Google Fonts for crisp industrial typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD Structured Data for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SecuritySystemProvider",
+      "name": "HUAN Surveillance",
+      "url": "https://huan-surveillance.com",
+      "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+      "description": "Professional surveillance engineering, turnkey IP CCTV installations, long-range optical fiber cabling, and 24/7 command center video walls in Pakistan.",
+      "telephone": "+92 344 3733996",
+      "email": "infa@huan-surveillance.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corporate Head Office & Service Desks, Main Shahrah-e-Faisal",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "24.8607",
+        "longitude": "67.0011"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "priceRange": "PKR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "342",
+        "bestRating": "5"
+      },
+      "areaServed": [
+        "Karachi",
+        "Lahore",
+        "Islamabad",
+        "Faisalabad",
+        "Hub",
+        "Pakistan"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#05101A] text-slate-100 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

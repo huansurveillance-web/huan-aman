@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h33v33H0z"/><path stroke="#000000" d="M2 2.5h7m5 0h2m1 0h1m1 0h1m4 0h7M2 3.5h1m5 0h1m2 0h1m2 0h1m1 0h2m2 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h3m2 0h1m2 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h4m2 0h2m4 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m5 0h2m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m2 0h1m1 0h2m1 0h1m2 0h4m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 9.5h1m1 0h1m2 0h1m1 0h1m4 0h1M4 10.5h2m2 0h3m1 0h3m2 0h1m2 0h2m1 0h2m1 0h1M2 11.5h2m6 0h2m2 0h3m1 0h1m1 0h1m1 0h4m1 0h2m1 0h1M3 12.5h3m2 0h2m1 0h2m1 0h1m4 0h1m1 0h2m1 0h4m1 0h1M3 13.5h2m4 0h1m1 0h1m1 0h5m1 0h2m1 0h1m2 0h3m2 0h1M2 14.5h9m3 0h4m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2M2 15.5h1m2 0h1m1 0h1m2 0h3m1 0h1m2 0h5m2 0h2m1 0h2m1 0h1M2 16.5h1m1 0h1m3 0h1m2 0h1m3 0h1m1 0h3m1 0h3m1 0h3m2 0h1M2 17.5h2m1 0h3m2 0h2m1 0h1m1 0h3m3 0h2m3 0h2M3 18.5h3m2 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h6m1 0h1M3 19.5h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m3 0h1m1 0h3m1 0h1M2 20.5h1m1 0h5m1 0h4m2 0h2m2 0h1m3 0h2M4 21.5h3m2 0h1m2 0h3m1 0h1m2 0h2m1 0h5m1 0h1m1 0h1M3 22.5h2m3 0h1m1 0h1m1 0h2m1 0h1m2 0h2m1 0h6m1 0h2M10 23.5h2m1 0h1m7 0h2m3 0h2m1 0h2M2 24.5h7m1 0h1m1 0h2m4 0h1m2 0h2m1 0h1m1 0h1m1 0h2M2 25.5h1m5 0h1m4 0h1m1 0h1m2 0h2m2 0h1m3 0h1m2 0h2M2 26.5h1m1 0h3m1 0h1m3 0h1m1 0h6m2 0h7m1 0h1M2 27.5h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h2m1 0h1m1 0h1m4 0h1m1 0h1M2 28.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m4 0h1m2 0h1m2 0h1m1 0h1M2 29.5h1m5 0h1m3 0h2m2 0h4m1 0h1m2 0h1m1 0h1m1 0h2M2 30.5h7m2 0h2m2 0h1m1 0h2m4 0h3m1 0h3"/>
+    <!-- Center White Badge Circle -->
+    <circle cx="16.5" cy="16.5" r="5.28" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.8" />
+    
+    <!-- WhatsApp Chat Bubble Shape with Phone -->
+    <g transform="translate(16.5, 16.5) scale(0.2904)">
+      <!-- Bubble background outline -->
+      <path d="M0 -12 C-6.6 -12 -12 -6.6 -12 0 C-12 2.3 -11.3 4.5 -10.1 6.3 L-11.5 11.5 L-6.2 10.1 C-4.4 11.3 -2.3 12 0 12 C6.6 12 12 6.6 12 0 C12 -6.6 6.6 -12 0 -12 Z" 
+            fill="#FFFFFF" stroke="#000000" stroke-width="1.8" />
+      
+      <!-- Phone handset inside -->
+      <path d="M-3.5 -5 C-3.8 -5.5 -4.3 -5.5 -4.8 -5.5 C-5.2 -5.5 -5.7 -5.3 -6.1 -4.8 C-6.7 -4.1 -7.5 -2.7 -7.5 -0.8 C-7.5 1.7 -6 4.3 -3.8 6.5 C-1.6 8.7 1 10.2 3.5 10.2 C5.4 10.2 6.8 9.4 7.5 8.8 C8 8.4 8.2 7.9 8.2 7.5 C8.2 7 -8.2 -7 -3.5 -5" 
+            fill="none" />
+      <path d="M-4.2 -4 C-4.6 -4 -5.5 -3.5 -5.8 -2.5 C-6.2 -1.2 -5.2 1.5 -3.2 3.5 C-1.2 5.5 1.5 6.5 2.8 6.1 C3.8 5.8 4.3 4.9 4.3 4.5 C4.3 4.1 3.5 3.7 2.8 3.3 C2.1 2.9 1.9 3 1.5 3.5 C1.2 3.9 0.9 4 0.5 3.8 C-0.1 3.5 -1.5 2.6 -2.4 1.7 C-3.3 0.8 -4.2 -0.6 -4.5 -1.2 C-4.7 -1.6 -4.6 -1.9 -4.2 -2.3 C-3.9 -2.6 -3.5 -3.2 -3.7 -3.6 C-3.9 -4 -4.2 -4 -4.2 -4 Z" 
+            fill="#000000" />
+      
+      <!-- Plus symbol for WhatsApp Business -->
+      <path d="M4 -7 L8 -7 M6 -9 L6 -5" stroke="#000000" stroke-width="1.4" stroke-linecap="round" />
+    </g>
+  </svg>

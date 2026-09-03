@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%" fill="none">
+  <!-- Navy Blue Shield -->
+  <path d="M 200 40 
+           C 218 45 315 88 350 110 
+           C 362 118 370 132 368 148 
+           C 360 220 365 305 305 390 
+           C 268 442 225 470 200 480 
+           C 175 470 132 442 95 390 
+           C 35 305 40 220 32 148 
+           C 30 132 38 118 50 110 
+           C 85 88 182 45 200 40 Z" 
+        fill="#11466A" />
+
+  <!-- Upper Helmet Visor / Crest -->
+  <path d="M 92 215 
+           C 115 155 168 115 238 115 
+           C 300 115 342 145 352 188 
+           C 358 215 348 238 322 242 
+           C 308 244 298 236 295 222 
+           C 292 205 280 185 258 172 
+           C 232 158 195 156 160 170 
+           C 125 184 105 202 92 215 Z" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Main Camera Visor Body -->
+  <path d="M 85 218 
+           C 125 224 175 185 238 185 
+           C 285 185 318 218 318 258 
+           C 318 298 285 330 238 330 
+           C 192 330 152 295 125 260 
+           C 112 244 98 228 85 218 Z" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Circular Camera Lens Eye -->
+  <circle cx="240" cy="258" r="35" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="18" />
+
+  <!-- Outer Conduit Cable to Left Shield Edge -->
+  <path d="M 75 355 
+           C 105 355 142 350 145 315 
+           L 145 285" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Inner Conduit Cable -->
+  <path d="M 168 305 
+           C 172 338 178 370 195 390 
+           C 205 402 202 415 188 422 
+           C 170 428 145 405 130 380" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Bottom Dynamic Slash Stripe -->
+  <path d="M 125 435 
+           L 165 465" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="18" 
+        stroke-linecap="round" />
+</svg>
