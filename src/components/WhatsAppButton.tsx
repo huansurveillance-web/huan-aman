@@ -160,7 +160,7 @@ export const WhatsAppButton: React.FC = () => {
 
               <div className="text-xs space-y-1 font-mono text-slate-300">
                 <p className="font-bold text-white">+92 344 3733996</p>
-                <p className="text-[11px] text-slate-400">infa@huan-surveillance.com</p>
+                <p className="text-[11px] text-slate-400">info@huan-surveillance.com</p>
               </div>
 
               <a

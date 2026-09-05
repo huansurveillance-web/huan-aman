@@ -460,7 +460,7 @@ export const CompanyProfile: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>Email: <strong className="font-mono text-white">infa@huan-surveillance.com</strong></span>
+                <span>Email: <strong className="font-mono text-white">info@huan-surveillance.com</strong></span>
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-4 h-4 text-blue-400 shrink-0" />

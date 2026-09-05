@@ -836,7 +836,7 @@ export function createCompanyProfileDocument(stats?: CompanyStats): jsPDF {
   const contactItems = [
     { label: 'COMPANY NAME', val: 'HUAN Surveillance' },
     { label: 'PHONE / WHATSAPP', val: '+92 344 3733996' },
-    { label: 'EMAIL ADDRESS', val: 'infa@huan-surveillance.com' },
+    { label: 'EMAIL ADDRESS', val: 'info@huan-surveillance.com' },
     { label: 'OFFICIAL WEBSITE', val: 'www.huan-surveillance.com' },
     { label: 'CORE COVERAGE AREA', val: 'Karachi & All Over Pakistan' }
   ];
@@ -1028,7 +1028,7 @@ export function generateQuotePDF(lead: QuoteLead, stats?: CompanyStats) {
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(200, 225, 245);
   doc.text('COMMERCIAL SECURITY ENGINEERING & PROPOSAL DOSSIER', 36, 26);
-  doc.text('Helpline / WhatsApp: +92 344 3733996 | Email: infa@huan-surveillance.com', 36, 32);
+  doc.text('Helpline / WhatsApp: +92 344 3733996 | Email: info@huan-surveillance.com', 36, 32);
   doc.text('NTN Registered FBR Corporate Vendor | Karachi, Pakistan', 36, 37);
 
   currentY = 52;
