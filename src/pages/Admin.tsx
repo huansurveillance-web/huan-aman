@@ -705,6 +705,30 @@ export const Admin: React.FC = () => {
                   className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-white"
                 />
               </div>
+
+              <div>
+                <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  General Contact Email
+                </label>
+                <input
+                  type="email"
+                  value={statsForm.email || ''}
+                  onChange={(e) => setStatsForm({ ...statsForm, email: e.target.value })}
+                  className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  Sales Email
+                </label>
+                <input
+                  type="email"
+                  value={statsForm.salesEmail || ''}
+                  onChange={(e) => setStatsForm({ ...statsForm, salesEmail: e.target.value })}
+                  className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-white"
+                />
+              </div>
             </div>
 
             <button
