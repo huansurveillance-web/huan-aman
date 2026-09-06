@@ -179,7 +179,7 @@ export function createCompanyProfileDocument(stats?: CompanyStats): jsPDF {
   doc.setTextColor(slateMuted[0], slateMuted[1], slateMuted[2]);
   
   const aboutP1 = doc.splitTextToSize(
-    'HUAN Surveillance is a Pakistan-based security and surveillance solutions provider specializing in the design, supply, installation, and maintenance of advanced security systems. With over three years of industry experience, we help businesses, institutions, industrial facilities, and residential clients enhance safety, monitor critical assets, and maintain operational security through reliable and modern surveillance technologies.',
+    `HUAN Surveillance is a Pakistan-based security and surveillance solutions provider specializing in the design, supply, installation, and maintenance of advanced security systems. With over ${stats?.yearsInBusiness ?? 3} years of industry experience, we help businesses, institutions, industrial facilities, and residential clients enhance safety, monitor critical assets, and maintain operational security through reliable and modern surveillance technologies.`,
     pageWidth - 40
   );
   doc.text(aboutP1, 20, y);
@@ -644,7 +644,7 @@ export function createCompanyProfileDocument(stats?: CompanyStats): jsPDF {
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(28);
-  doc.text('3+', 20 + heroCardWidth / 2, y + 18, { align: 'center' });
+  doc.text(`${stats?.yearsInBusiness ?? 3}+`, 20 + heroCardWidth / 2, y + 18, { align: 'center' });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);
@@ -658,7 +658,7 @@ export function createCompanyProfileDocument(stats?: CompanyStats): jsPDF {
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(28);
-  doc.text('90+', heroCard2X + heroCardWidth / 2, y + 18, { align: 'center' });
+  doc.text(`${stats?.sitesCompleted ?? 90}+`, heroCard2X + heroCardWidth / 2, y + 18, { align: 'center' });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);

@@ -206,11 +206,11 @@ export const CompanyProfile: React.FC = () => {
             <div className="space-y-2.5 text-xs">
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Industry Experience:</span>
-                <span className="font-bold text-white font-mono">3+ Years</span>
+                <span className="font-bold text-white font-mono">{companyStats.yearsInBusiness}+ Years</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Completed Projects:</span>
-                <span className="font-bold text-blue-400 font-mono">90+ Sites</span>
+                <span className="font-bold text-blue-400 font-mono">{companyStats.sitesCompleted}+ Sites</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Service Coverage:</span>
@@ -218,7 +218,7 @@ export const CompanyProfile: React.FC = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Karachi SLA:</span>
-                <span className="font-bold text-amber-400">24–36hr Resolution</span>
+                <span className="font-bold text-amber-400">{companyStats.karachiResolutionHours || '24\u201336hr'} Resolution</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Notable Defense Client:</span>
@@ -239,7 +239,7 @@ export const CompanyProfile: React.FC = () => {
         <div className="p-6 bg-white dark:bg-[#081827] rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Experience</span>
           <div className="text-3xl sm:text-4xl font-black text-[#0E3A5C] dark:text-white font-mono mt-1">
-            3<span className="text-blue-500">+</span>
+            {companyStats.yearsInBusiness}<span className="text-blue-500">+</span>
           </div>
           <span className="text-[11px] text-slate-400 mt-1 block">Years Industry Experience</span>
         </div>
@@ -247,7 +247,7 @@ export const CompanyProfile: React.FC = () => {
         <div className="p-6 bg-white dark:bg-[#081827] rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Completed Projects</span>
           <div className="text-3xl sm:text-4xl font-black text-[#0E3A5C] dark:text-white font-mono mt-1">
-            90<span className="text-blue-500">+</span>
+            {companyStats.sitesCompleted}<span className="text-blue-500">+</span>
           </div>
           <span className="text-[11px] text-slate-400 mt-1 block">Successfully Delivered</span>
         </div>
@@ -255,7 +255,7 @@ export const CompanyProfile: React.FC = () => {
         <div className="p-6 bg-white dark:bg-[#081827] rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Sectors Served</span>
           <div className="text-3xl sm:text-4xl font-black text-[#0E3A5C] dark:text-white font-mono mt-1">
-            12<span className="text-blue-500">+</span>
+            {companyStats.sectorsServed}<span className="text-blue-500">+</span>
           </div>
           <span className="text-[11px] text-slate-400 mt-1 block">Industry Domains</span>
         </div>

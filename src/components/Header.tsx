@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCalculator }) => {
             </span>
             <span className="hidden md:inline-flex items-center gap-1 text-amber-400">
               <Clock className="w-3.5 h-3.5" />
-              <span>Karachi Guarantee: <strong>24–36hr</strong> Resolution SLA</span>
+              <span>Karachi Guarantee: <strong>{companyStats.karachiResolutionHours || '24\u201336hr'}</strong> Resolution SLA</span>
             </span>
             <span className="hidden lg:inline-flex items-center gap-1 text-slate-400">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />

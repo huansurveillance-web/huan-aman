@@ -55,7 +55,7 @@ export const AboutUs: React.FC = () => {
             Engineering Security with Precision & Accountability
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            With over three years of industry experience and 90+ completed installations across Pakistan, we help businesses, institutions, industrial facilities, and residential clients enhance safety, monitor critical assets, and maintain operational security through reliable and modern surveillance technologies.
+            With over {companyStats.yearsInBusiness}+ years of industry experience and {companyStats.sitesCompleted}+ completed installations across Pakistan, we help businesses, institutions, industrial facilities, and residential clients enhance safety, monitor critical assets, and maintain operational security through reliable and modern surveillance technologies.
           </p>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             Our commitment is to deliver practical, scalable, and cost-effective security solutions tailored to the unique requirements of every client. From small businesses to large-scale industrial environments, we focus on quality workmanship, technical expertise, and long-term customer support.
@@ -89,8 +89,8 @@ export const AboutUs: React.FC = () => {
                 <Clock className="w-4 h-4" />
               </div>
               <div>
-                <strong className="text-slate-900 dark:text-white block">3+ Years Experience</strong>
-                <span>Over 90+ successfully delivered projects across commercial, defense, and residential sectors.</span>
+                <strong className="text-slate-900 dark:text-white block">{companyStats.yearsInBusiness}+ Years Experience</strong>
+                <span>Over {companyStats.sitesCompleted}+ successfully delivered projects across commercial, defense, and residential sectors.</span>
               </div>
             </div>
 
