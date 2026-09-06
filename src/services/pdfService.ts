@@ -921,22 +921,19 @@ export function generateCompanyProfilePDF(stats?: CompanyStats) {
 }
 
 /**
- * Downloads the official static company profile PDF from /public/company-profile.pdf
- * with a fallback to generateCompanyProfilePDF if direct download encounters an issue.
+ * Downloads the official static company profile PDF (the designed version
+ * provided by the client) from /public/company-profile.pdf. This is always
+ * the file that ships — there is no dynamically-generated fallback anymore,
+ * so the download always matches the client's actual designed document.
  */
-export function downloadCompanyProfileFile(stats?: CompanyStats) {
-  try {
-    const link = document.createElement('a');
-    link.href = '/company-profile.pdf';
-    link.download = 'HUAN-Surveillance-Company-Profile.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } catch (err) {
-    console.warn('Direct PDF download failed, falling back to dynamic generation:', err);
-    generateCompanyProfilePDF(stats);
-  }
+export function downloadCompanyProfileFile(_stats?: CompanyStats) {
+  const link = document.createElement('a');
+  link.href = '/company-profile.pdf';
+  link.download = 'HUAN-Surveillance-Company-Profile.pdf';
+  link.target = '_blank';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 /**
