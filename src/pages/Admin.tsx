@@ -21,7 +21,8 @@ import {
   Save,
   Check,
   HardDrive,
-  FileText
+  FileText,
+  X
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { Product, QuoteLead, Review } from '../types';
@@ -41,6 +42,9 @@ export const Admin: React.FC = () => {
     addProduct, 
     updateProduct, 
     deleteProduct,
+    categories,
+    addCategory,
+    deleteCategory,
     reviews, 
     approveReview, 
     deleteReview,
@@ -130,6 +134,7 @@ export const Admin: React.FC = () => {
         description: productForm.description || '',
         features: productForm.features || ['Commercial Surveillance Grade', '2-Year Official Replacement Warranty'],
         specs: productForm.specs || { 'Warranty': '2-Year Official Replacement' },
+        warranty: productForm.warranty || '2-Year Official Replacement',
         isPackage: Boolean(productForm.isPackage),
         packageIncludes: productForm.isPackage ? ['Complete Kit Hardware', 'Certified Installation'] : undefined,
         inStock: true,
@@ -466,7 +471,56 @@ export const Admin: React.FC = () => {
       {/* ================= TAB 2: PRODUCTS CRUD ================= */}
       {activeTab === 'products' && (
         <div className="space-y-6">
-          
+
+          <div className="bg-white dark:bg-[#081827] rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+            <h3 className="font-bold text-sm text-slate-900 dark:text-white mb-3">Manage Categories</h3>
+            <div className="flex flex-wrap gap-2 mb-3">
+              {categories.map((cat) => (
+                <span
+                  key={cat.id}
+                  className="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-medium px-3 py-1.5 rounded-full"
+                >
+                  {cat.label}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (confirm(`Delete category "${cat.label}"? Existing products keep their saved category value.`)) {
+                        deleteCategory(cat.id);
+                      }
+                    }}
+                    className="text-slate-400 hover:text-red-400 cursor-pointer"
+                    title="Delete category"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </span>
+              ))}
+            </div>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const input = e.currentTarget.elements.namedItem('newCategory') as HTMLInputElement;
+                addCategory(input.value);
+                input.value = '';
+              }}
+              className="flex gap-2"
+            >
+              <input
+                name="newCategory"
+                type="text"
+                placeholder="New category name (e.g. Solar Cameras)"
+                className="flex-1 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-900 dark:text-white"
+              />
+              <button
+                type="submit"
+                className="inline-flex items-center gap-1 bg-[#0E3A5C] hover:bg-[#124974] text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors cursor-pointer"
+              >
+                <Plus className="w-4 h-4" />
+                Add
+              </button>
+            </form>
+          </div>
+
           <div className="flex items-center justify-between">
             <h3 className="font-bold text-base text-slate-900 dark:text-white">
               Inventory & Turnkey Bundles ({products.length})
@@ -781,14 +835,21 @@ export const Admin: React.FC = () => {
                     onChange={(e) => setProductForm({ ...productForm, category: e.target.value as any })}
                     className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"
                   >
-                    <option value="dome">Dome & Turret</option>
-                    <option value="bullet">Bullet Camera</option>
-                    <option value="ptz">Speed Dome PTZ</option>
-                    <option value="nvr">NVR Recorder</option>
-                    <option value="fiber">Fiber Optic Gear</option>
-                    <option value="control-room">Command Center Video Wall</option>
-                    <option value="access">Access Control</option>
+                    {categories.map((cat) => (
+                      <option key={cat.id} value={cat.value}>{cat.label}</option>
+                    ))}
                   </select>
+                </div>
+
+                <div>
+                  <label className="block text-slate-300 mb-1">Warranty</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. 2-Year Official Replacement"
+                    value={productForm.warranty || ''}
+                    onChange={(e) => setProductForm({ ...productForm, warranty: e.target.value })}
+                    className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"
+                  />
                 </div>
 
                 <div>

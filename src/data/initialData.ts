@@ -1,4 +1,4 @@
-import { BlogPost, CompanyStats, Product, QuoteLead, Review } from '../types';
+import { BlogPost, Category, CompanyStats, Product, QuoteLead, Review } from '../types';
 
 export const INITIAL_COMPANY_STATS: CompanyStats = {
   yearsInBusiness: 3,
@@ -21,6 +21,17 @@ export const INITIAL_COMPANY_STATS: CompanyStats = {
   coverageArea: "Karachi & All Over Pakistan",
   notableClient: "CMES (Pakistan Navy)"
 };
+
+export const INITIAL_CATEGORIES: Category[] = [
+  { id: 'dome', value: 'dome', label: 'Dome & Turret' },
+  { id: 'bullet', value: 'bullet', label: 'Bullet Camera' },
+  { id: 'ptz', value: 'ptz', label: 'Speed Dome PTZ' },
+  { id: 'nvr', value: 'nvr', label: 'NVR Recorder' },
+  { id: 'fiber', value: 'fiber', label: 'Fiber Optic Gear' },
+  { id: 'control-room', value: 'control-room', label: 'Command Center Video Wall' },
+  { id: 'access', value: 'access', label: 'Access Control' },
+  { id: 'package', value: 'package', label: 'Turnkey Package' },
+];
 
 export const INITIAL_PRODUCTS: Product[] = [
   // Packages / Bundles

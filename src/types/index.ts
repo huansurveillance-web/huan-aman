@@ -11,7 +11,7 @@ export type ServiceCategory =
 export interface Product {
   id: string;
   name: string;
-  category: 'dome' | 'bullet' | 'ptz' | 'nvr' | 'fiber' | 'control-room' | 'access' | 'package';
+  category: string;
   brand: string;
   modelNumber: string;
   price: number; // in PKR
@@ -27,6 +27,13 @@ export interface Product {
   inStock: boolean;
   rating: number;
   reviewCount: number;
+  warranty?: string;
+}
+
+export interface Category {
+  id: string;
+  value: string;
+  label: string;
 }
 
 export interface CartItem {

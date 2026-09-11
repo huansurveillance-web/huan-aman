@@ -17,6 +17,7 @@ export const COLLECTIONS = {
   blogPosts: 'blog_posts',
   quoteLeads: 'quote_leads',
   companyStats: 'company_stats',
+  categories: 'categories',
 } as const;
 
 // Single shared client + services, used across the app.

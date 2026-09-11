@@ -1,18 +1,20 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import {
   INITIAL_BLOG_POSTS,
+  INITIAL_CATEGORIES,
   INITIAL_COMPANY_STATS,
   INITIAL_LEADS,
   INITIAL_PRODUCTS,
   INITIAL_REVIEWS,
   INITIAL_SERVICES,
 } from '../data/initialData';
-import { BlogPost, CartItem, CompanyStats, Product, QuoteLead, Review } from '../types';
+import { BlogPost, CartItem, Category, CompanyStats, Product, QuoteLead, Review } from '../types';
 import { ID } from '../lib/appwrite';
 import {
   adminLogin,
   adminLogout,
   blogApi,
+  categoriesApi,
   companyStatsApi,
   getCurrentAdmin,
   leadsApi,
@@ -32,6 +34,11 @@ interface AppContextType {
   addProduct: (product: Omit<Product, 'id'>) => void;
   updateProduct: (id: string, product: Partial<Product>) => void;
   deleteProduct: (id: string) => void;
+
+  // Categories
+  categories: Category[];
+  addCategory: (label: string) => void;
+  deleteCategory: (id: string) => void;
 
   // Cart
   cart: CartItem[];
@@ -123,6 +130,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // ---------- Data (Appwrite-backed, seeded with sample data until first load resolves) ----------
   const [products, setProducts] = useState<Product[]>(INITIAL_PRODUCTS);
+  const [categories, setCategories] = useState<Category[]>(INITIAL_CATEGORIES);
   const [reviews, setReviews] = useState<Review[]>(INITIAL_REVIEWS);
   const [companyStats, setCompanyStats] = useState<CompanyStats>(INITIAL_COMPANY_STATS);
   const [quoteLeads, setQuoteLeads] = useState<QuoteLead[]>(INITIAL_LEADS);
@@ -145,6 +153,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Load real data from Appwrite once on mount.
   useEffect(() => {
     productsApi.list().then((data) => { if (data.length) setProducts(data); }).catch(() => {});
+    categoriesApi.list().then((data) => { if (data.length) setCategories(data); }).catch(() => {});
     reviewsApi.list().then((data) => { if (data.length) setReviews(data); }).catch(() => {});
     blogApi.list().then((data) => { if (data.length) setBlogPosts(data); }).catch(() => {});
     leadsApi.list().then((data) => setQuoteLeads(data)).catch(() => {});
@@ -206,6 +215,28 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setProducts((prev) => prev.filter((p) => p.id !== id));
     showToast('Product removed from catalog.');
     productsApi.remove(id).catch(() => {});
+  };
+
+  // ---------- Category Actions ----------
+  const addCategory = (label: string) => {
+    const trimmed = label.trim();
+    if (!trimmed) return;
+    const value = trimmed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    if (categories.some((c) => c.value === value)) {
+      showToast('This category already exists.');
+      return;
+    }
+    const newId = ID.unique();
+    const newCategory: Category = { id: newId, value, label: trimmed };
+    setCategories((prev) => [...prev, newCategory]);
+    showToast(`Category "${trimmed}" added.`);
+    categoriesApi.create(newId, { value, label: trimmed }).catch(() => showToast('Warning: category failed to sync.'));
+  };
+
+  const deleteCategory = (id: string) => {
+    setCategories((prev) => prev.filter((c) => c.id !== id));
+    showToast('Category removed.');
+    categoriesApi.remove(id).catch(() => {});
   };
 
   // ---------- Cart Actions (local only) ----------
@@ -396,6 +427,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         addProduct,
         updateProduct,
         deleteProduct,
+        categories,
+        addCategory,
+        deleteCategory,
         cart,
         addToCart,
         removeFromCart,

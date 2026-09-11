@@ -9,7 +9,7 @@ import {
   Query,
   fileViewUrl,
 } from '../lib/appwrite';
-import { BlogPost, CompanyStats, Product, QuoteLead, Review } from '../types';
+import { BlogPost, Category, CompanyStats, Product, QuoteLead, Review } from '../types';
 
 // ---------- Auth ----------
 
@@ -167,6 +167,15 @@ export const companyStatsApi = {
       return await databases.createDocument(DATABASE_ID, COLLECTIONS.companyStats, 'main', payload);
     }
   },
+};
+
+// ---------- Product categories (admin-manageable) ----------
+
+export const categoriesApi = {
+  list: () => listAll<Category>(COLLECTIONS.categories),
+  create: (id: string, data: Omit<Category, 'id'>) =>
+    databases.createDocument(DATABASE_ID, COLLECTIONS.categories, id, toPayload(data)),
+  remove: (id: string) => databases.deleteDocument(DATABASE_ID, COLLECTIONS.categories, id),
 };
 
 // ---------- Storage (product images, catalog PDFs) ----------
