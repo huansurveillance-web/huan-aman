@@ -112,6 +112,7 @@ export interface CompanyStats {
   slogan?: string;
   coverageArea?: string;
   notableClient?: string;
+  standardWarranty?: string;
 }
 
 export interface BlogPost {

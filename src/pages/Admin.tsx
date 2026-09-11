@@ -783,6 +783,19 @@ export const Admin: React.FC = () => {
                   className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-white"
                 />
               </div>
+
+              <div>
+                <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  Standard Warranty Badge (shown site-wide on Home, Products page etc.)
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. 2-Year Hardware Warranty"
+                  value={statsForm.standardWarranty || ''}
+                  onChange={(e) => setStatsForm({ ...statsForm, standardWarranty: e.target.value })}
+                  className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-white"
+                />
+              </div>
             </div>
 
             <button

@@ -89,7 +89,7 @@ export const ProductDetail: React.FC = () => {
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-slate-50 dark:bg-[#081827] rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-2.5 text-slate-700 dark:text-slate-300">
               <ShieldCheck className="w-4 h-4 text-blue-500 shrink-0" />
-              <span>2-Year Warranty</span>
+              <span>{product.warranty || '2-Year Warranty'}</span>
             </div>
             <div className="p-3 bg-slate-50 dark:bg-[#081827] rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-2.5 text-slate-700 dark:text-slate-300">
               <Clock className="w-4 h-4 text-amber-500 shrink-0" />

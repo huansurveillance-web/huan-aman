@@ -21,7 +21,8 @@ export const Products: React.FC = () => {
     addToCart, 
     navigate, 
     searchQuery, 
-    setSearchQuery 
+    setSearchQuery,
+    companyStats
   } = useApp();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -280,7 +281,7 @@ export const Products: React.FC = () => {
         <div className="flex items-center gap-3">
           <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0" />
           <span>
-            Every purchase includes <strong>2-Year Hardware Replacement Warranty</strong> and optional turnkey installation anywhere in Pakistan.
+            Every purchase includes <strong>{companyStats.standardWarranty || '2-Year Hardware Replacement Warranty'}</strong> and optional turnkey installation anywhere in Pakistan.
           </span>
         </div>
 

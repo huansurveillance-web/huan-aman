@@ -25,7 +25,8 @@ export const Cart: React.FC = () => {
     formatPrice, 
     submitQuoteLead, 
     navigate,
-    showToast 
+    showToast,
+    companyStats
   } = useApp();
 
   const [customerName, setCustomerName] = useState('');
@@ -74,7 +75,7 @@ export const Cart: React.FC = () => {
         infrastructurePlan: 'Standard cabling & installation for selected components.',
         recommendedTier: 'Custom Cart Solution',
         estimatedPriceRangePKR: cartTotal > 0 ? formatPrice(cartTotal) : 'Formal Custom Quotation Required',
-        specialNotes: 'Includes Karachi 24–36hr resolution guarantee and 2-year warranty.'
+        specialNotes: `Includes Karachi ${companyStats.karachiResolutionHours || '24–36'}hr resolution guarantee and ${companyStats.standardWarranty || '2-year warranty'}.`
       }
     });
 

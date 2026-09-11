@@ -124,7 +124,7 @@ export const Home: React.FC<{ onOpenCalculator?: () => void }> = ({ onOpenCalcul
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>2-Year Hardware Warranty</span>
+                  <span>{companyStats.standardWarranty || '2-Year Hardware Warranty'}</span>
                 </div>
               </div>
             </div>
@@ -377,7 +377,7 @@ export const Home: React.FC<{ onOpenCalculator?: () => void }> = ({ onOpenCalcul
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" />
-                  <span>2-Year full replacement warranty</span>
+                  <span>{companyStats.standardWarranty || '2-Year full replacement warranty'}</span>
                 </li>
               </ul>
             </div>

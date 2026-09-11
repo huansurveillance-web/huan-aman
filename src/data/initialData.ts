@@ -19,7 +19,8 @@ export const INITIAL_COMPANY_STATS: CompanyStats = {
   website: "www.huan-surveillance.com",
   slogan: "Protecting What Matters Most",
   coverageArea: "Karachi & All Over Pakistan",
-  notableClient: "CMES (Pakistan Navy)"
+  notableClient: "CMES (Pakistan Navy)",
+  standardWarranty: "2-Year Hardware Warranty"
 };
 
 export const INITIAL_CATEGORIES: Category[] = [
